@@ -1,7 +1,7 @@
 $(function () {
 
-  $('.menu__btn--search').on('click', function () {
-    $('.menu__form').toggleClass('menu__form--active');
+  $('.search__btn, .search__submit-btn').on('click', function () {
+    $('.search').toggleClass('search--active');
   });
 
   var mixer = mixitup('.categories__product');

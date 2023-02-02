@@ -1,0 +1,134 @@
+.categories {
+  text-align: center;
+  padding-bottom: 120px;
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__filter-buttons {
+    display: flex;
+    margin-bottom: 52px;
+  }
+
+  &__filter-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__filter-btn {
+    display: flex;
+    align-items: center;
+    padding: 12px 32px;
+    border: 1px solid $silver;
+    border-radius: 5px;
+    transition: outline 0.5s, border-color 0.3s, color 0.3s;
+
+    .mixitup-control-active {
+      color: $white;
+      background-color: $accent;
+    }
+
+    &--active {
+      color: $white;
+      background-color: $accent;
+    }
+
+    &:focus {
+      outline: 2px solid $accent;
+      border-color: transparent;
+    }
+
+    &:hover {
+      outline: 2px solid $accent;
+      background-color: #ff795019;
+      color: $accent;
+    }
+
+    &:active {
+      box-shadow: inset 0px -5px 12px rgba(255, 104, 56, 0.2);
+    }
+  }
+
+  &__filter-img {
+    margin-right: 10px;
+  }
+
+  &__item {
+    border: 2px solid $silver;
+    border-radius: 5px;
+    transition: outline 0.5s;
+
+    &:focus,
+    &:hover {
+      border-color: transparent;
+      outline: 2px solid $accent;
+    }
+  }
+
+  &__product {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin-bottom: 53px;
+  }
+
+  &__details {
+    text-decoration: 1px underline $text;
+    border-radius: 5px;
+    transition: outline 0.8s, color 0.8s, text-shadow 0.8s, text-decoration 0.5s;
+
+    &:focus {
+      outline: 2px solid $accent;
+      text-decoration-color: transparent;
+    }
+
+    &:hover {
+      text-decoration-color: transparent;
+      color: $accent;
+    }
+
+    &:active {
+      text-decoration-color: transparent;
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    }
+  }
+}
+
+.product {
+  max-width: 210px;
+  width: 100%;
+  background-color: $white;
+  padding: 20px 15px;
+  text-align: center;
+
+  &__photo {
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.2;
+    color: $text;
+    margin-bottom: 10px;
+    height: 36px;
+  }
+
+  &__price {
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: $dark-blue;
+    display: block;
+    margin-bottom: 10px;
+    height: 21px;
+  }
+
+  &__btn {
+    width: 100px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+}
