@@ -24,14 +24,13 @@
     border-radius: 5px;
     transition: outline 0.5s, border-color 0.3s, color 0.3s;
 
-    .mixitup-control-active {
+    &.mixitup-control-active {
       color: $white;
       background-color: $accent;
-    }
 
-    &--active {
-      color: $white;
-      background-color: $accent;
+      .categories__icon {
+        fill: $white;
+      }
     }
 
     &:focus {
@@ -43,6 +42,10 @@
       outline: 2px solid $accent;
       background-color: #ff795019;
       color: $accent;
+
+      .categories__icon {
+        fill: $accent;
+      }
     }
 
     &:active {
@@ -50,20 +53,9 @@
     }
   }
 
-  &__filter-img {
+  &__icon {
     margin-right: 10px;
-  }
-
-  &__item {
-    border: 2px solid $silver;
-    border-radius: 5px;
-    transition: outline 0.5s;
-
-    &:focus,
-    &:hover {
-      border-color: transparent;
-      outline: 2px solid $accent;
-    }
+    transition: all 0.5s;
   }
 
   &__product {
@@ -95,12 +87,20 @@
   }
 }
 
-.product {
+.product-card {
   max-width: 210px;
   width: 100%;
   background-color: $white;
   padding: 20px 15px;
   text-align: center;
+  border: 2px solid $silver;
+  border-radius: 5px;
+  transition: outline 0.5s;
+
+  &:hover {
+    border-color: transparent;
+    outline: 2px solid $accent;
+  }
 
   &__photo {
     margin: 0 auto;
@@ -112,7 +112,6 @@
     line-height: 1.2;
     color: $text;
     margin-bottom: 10px;
-    height: 36px;
   }
 
   &__price {
@@ -122,12 +121,9 @@
     color: $dark-blue;
     display: block;
     margin-bottom: 10px;
-    height: 21px;
   }
 
   &__btn {
-    width: 100px;
-    height: 32px;
     font-size: 14px;
     line-height: 1.3;
   }

@@ -77,6 +77,14 @@ body {
     background-color: #ff79501a;
     color: $accent;
   }
+
+  &--small {
+    padding: 7px 15px;
+  }
+
+  &--big {
+    padding: 12px 32px;
+  }
 }
 
 .subtitle {
