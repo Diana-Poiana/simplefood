@@ -1,0 +1,33 @@
+.app {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    min-width: 570px;
+    height: 380px;
+  }
+
+  &__subtitle {
+    max-width: 540px;
+    width: 100%;
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    max-width: 540px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    display: block;
+    margin-right: 30px;
+  }
+}

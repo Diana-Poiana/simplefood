@@ -1,5 +1,5 @@
 $(function () {
-  $("#submit").hide(); 
+  $("#submit").hide();
   $("#search").on('click', function () {
     $("#submit").show();
     $("#search").hide();
@@ -11,7 +11,11 @@ $(function () {
   $('.search__btn, .search__submit-btn').on('click', function () {
     $('.search').toggleClass('search--active');
   });
-  
+
+  $('.review__content').slick({
+    dots: true,
+    fade: true
+  });
 
   $('.categories__filter-btn').on('click', function () {
     $('.this').addClass('categories__filter-btn--active')

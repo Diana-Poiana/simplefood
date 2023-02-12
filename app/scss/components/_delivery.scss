@@ -1,0 +1,54 @@
+.delivery {
+  padding-bottom: 120px;
+
+  &__content {
+    height: 585px;
+    background-repeat: no-repeat;
+    background-position: 10% center;
+    padding: 0 70px 0 90px;
+  }
+
+  &__inner {
+    max-width: 470px;
+    width: 100%;
+    float: right;
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    color: $dark-blue;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 30px;
+  }
+
+  &__icon {
+    margin-right: 30px;
+
+    &--timer {
+      fill: $accent;
+    }
+
+    &--delivery {
+      fill: #00AAFF;
+    }
+
+    &--restaurant {
+      fill: #FF2222;
+    }
+  }
+}
