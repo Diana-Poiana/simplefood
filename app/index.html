@@ -49,7 +49,8 @@
           </ul>
         </nav>
 
-        <div class="header__tools">
+        <div class="header__form">
+
           <form class="search" action="#" name="search-form">
             <label class="search__label">
               <span class="sr-only">
@@ -57,23 +58,26 @@
               </span>
               <input class="search__input" type="text" name="search-input" placeholder="Поиск по сайту">
             </label>
+
+            <button class="search__submit-btn search__submit-btn--submit" id="submit" type="submit">
+              <svg class="search__icon" width="19" height="19">
+                <use href="images/sprite.svg#search"></use>
+              </svg>
+              <span class="sr-only">
+                найти
+              </span>
+            </button>
           </form>
+        </div>
+
+        <div class="header__tools">
 
           <button class="search__btn search__btn--search" id="search" type="button">
             <svg class="search__icon" width="19" height="19">
               <use href="images/sprite.svg#search"></use>
             </svg>
             <span class="sr-only">
-              искать
-            </span>
-          </button>
-
-          <button class="search__submit-btn search__submit-btn--submit" id="submit" type="submit">
-            <svg class="search__icon" width="19" height="19">
-              <use href="images/sprite.svg#search"></use>
-            </svg>
-            <span class="sr-only">
-              найти
+              вызвать форму поиска
             </span>
           </button>
 
@@ -88,8 +92,8 @@
               4
             </span>
           </button>
-        </div>
 
+        </div>
       </div>
     </div>
   </header>
@@ -98,9 +102,9 @@
     <section class="hero">
       <div class="container">
 
-        <!-- <h1 class="sr-only">
+        <h1 class="sr-only">
           Сервис доставки еды Симплфуд | Главная страница
-        </h1> -->
+        </h1>
 
         <div class="hero__inner" style="background-image: url('images/home-page/scooter.png')">
 
@@ -444,11 +448,12 @@
           Лучшие рестораны
         </h2>
         <ul class="restaurant__list">
-          
+
           <li class="restaurant__item">
             <article class="restaurant__card restaurant__card--active">
               <a class="restaurant__link" href="#">
-                <img class="restaurant__image" src="images/home-page/blaze-pizza.jpg" alt="блэйз пицца">
+                <img class="restaurant__image" src="images/home-page/blaze-pizza.jpg" alt="блэйз пицца" width="370"
+                  height="300">
               </a>
               <div class="restaurant__info">
                 <h3 class="restaurant__name">
@@ -458,7 +463,9 @@
                   <svg class="restaurant__icon">
                     <use xlink:href="images/sprite.svg#time"></use>
                   </svg>
-                  11:00 - 22:00
+                  <span class="restaurant__timetable">
+                    11:00 - 22:00
+                  </span>
                   <button class="restaurant__btn">
                     <svg class="restaurant__btn-icon">
                       <use xlink:href="images/sprite.svg#arr-right"></use>
@@ -472,7 +479,8 @@
           <li class="restaurant__item">
             <article class="restaurant__card">
               <a class="restaurant__link" href="#">
-                <img class="restaurant__image" src="images/home-page/pizza-runcho.jpg" alt="блэйз пицца">
+                <img class="restaurant__image" src="images/home-page/pizza-runcho.jpg" alt="пицца ранчо" width="370"
+                  height="300">
               </a>
               <div class="restaurant__info">
                 <h3 class="restaurant__name">
@@ -482,7 +490,9 @@
                   <svg class="restaurant__icon">
                     <use xlink:href="images/sprite.svg#time"></use>
                   </svg>
-                  12:00 - 21:00
+                  <span class="restaurant__timetable">
+                    12:00 - 21:00
+                  </span>
                   <button class="restaurant__btn">
                     <svg class="restaurant__btn-icon">
                       <use xlink:href="images/sprite.svg#arr-right"></use>
@@ -496,7 +506,8 @@
           <li class="restaurant__item">
             <article class="restaurant__card">
               <a class="restaurant__link" href="#">
-                <img class="restaurant__image" src="images/home-page/pizza-hut.jpg" alt="блэйз пицца">
+                <img class="restaurant__image" src="images/home-page/pizza-hut.jpg" alt="пицца-хат" width="370"
+                  height="300">
               </a>
               <div class="restaurant__info">
                 <h3 class="restaurant__name">
@@ -506,7 +517,9 @@
                   <svg class="restaurant__icon">
                     <use xlink:href="images/sprite.svg#time"></use>
                   </svg>
-                  11:00 - 22:00
+                  <span class="restaurant__timetable">
+                    11:00 - 22:00
+                  </span>
                   <button class="restaurant__btn">
                     <svg class="restaurant__btn-icon">
                       <use xlink:href="images/sprite.svg#arr-right"></use>
@@ -520,7 +533,8 @@
           <li class="restaurant__item">
             <article class="restaurant__card">
               <a class="restaurant__link" href="#">
-                <img class="restaurant__image" src="images/home-page/mcdonalds.jpg" alt="блэйз пицца">
+                <img class="restaurant__image" src="images/home-page/mcdonalds.jpg" alt="мак дональдс" width="370"
+                  height="300">
               </a>
               <div class="restaurant__info">
                 <h3 class="restaurant__name">
@@ -530,7 +544,9 @@
                   <svg class="restaurant__icon">
                     <use xlink:href="images/sprite.svg#time"></use>
                   </svg>
-                  6:00 - 23:00
+                  <span class="restaurant__timetable">
+                    6:00 - 23:00
+                  </span>
                   <button class="restaurant__btn">
                     <svg class="restaurant__btn-icon">
                       <use xlink:href="images/sprite.svg#arr-right"></use>
@@ -544,7 +560,7 @@
           <li class="restaurant__item">
             <article class="restaurant__card">
               <a class="restaurant__link" href="#">
-                <img class="restaurant__image" src="images/home-page/kfc.jpg" alt="блэйз пицца">
+                <img class="restaurant__image" src="images/home-page/kfc.jpg" alt="кфс" width="370" height="300">
               </a>
               <div class="restaurant__info">
                 <h3 class="restaurant__name">
@@ -554,7 +570,9 @@
                   <svg class="restaurant__icon">
                     <use xlink:href="images/sprite.svg#time"></use>
                   </svg>
-                  6:00 - 23:30
+                  <span class="restaurant__timetable">
+                    6:00 - 23:00
+                  </span>
                   <button class="restaurant__btn">
                     <svg class="restaurant__btn-icon">
                       <use xlink:href="images/sprite.svg#arr-right"></use>
@@ -568,7 +586,8 @@
           <li class="restaurant__item">
             <article class="restaurant__card">
               <a class="restaurant__link" href="#">
-                <img class="restaurant__image" src="images/home-page/star-burger.jpg" alt="блэйз пицца">
+                <img class="restaurant__image" src="images/home-page/star-burger.jpg" alt="стар бургер" width="370"
+                  height="300">
               </a>
               <div class="restaurant__info">
                 <h3 class="restaurant__name">
@@ -578,7 +597,9 @@
                   <svg class="restaurant__icon">
                     <use xlink:href="images/sprite.svg#time"></use>
                   </svg>
-                  9:00 - 21:00
+                  <span class="restaurant__timetable">
+                    9:00 - 21:00
+                  </span>
                   <button class="restaurant__btn">
                     <svg class="restaurant__btn-icon">
                       <use xlink:href="images/sprite.svg#arr-right"></use>
@@ -599,6 +620,7 @@
         </h2>
 
         <div class="review__content">
+
           <div class="review__slider-content review__slider-content--active">
             <div class="review__slider-inner">
               <img class="review__photo" width="300" height="300" src="images/home-page/daria.jpg"
@@ -694,12 +716,14 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
     </section>
 
     <section class="app">
       <div class="container">
-        <div class="app__inner" style="background-image: url('images/home-page/app.jpg');" width="570" height="380">
+        <div class="app__inner" style="background-image: url('images/home-page/app.jpg');">
 
           <h2 class="app__subtitle subtitle">
             Скачайте мобильное приложение
@@ -738,13 +762,13 @@
           </a>
 
           <form class="footer__form" action="#">
-            <label class="footer__label" name="footer__label">
+            <label class="footer__label">
               <span class="sr-only">
                 Ваш email
               </span>
               <input class="footer__input" type="email" name="subscribe-input" placeholder="Ваш email" required>
             </label>
-            <button class="footer__btn button" type="submit">
+            <button class="footer__btn button--small" type="submit">
               <svg class="footer__icon" width="15" height="14">
                 <use href="images/sprite.svg#telegram"></use>
               </svg>

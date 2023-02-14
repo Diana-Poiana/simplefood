@@ -5,7 +5,9 @@
     height: 585px;
     background-repeat: no-repeat;
     background-position: 10% center;
+    background-size: 440px 585px;
     padding: 0 70px 0 90px;
+    object-fit: cover;
   }
 
   &__inner {
