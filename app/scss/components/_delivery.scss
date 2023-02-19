@@ -1,19 +1,19 @@
 .delivery {
   padding-bottom: 120px;
 
-  &__content {
-    height: 585px;
+  &__inner {
     background-repeat: no-repeat;
     background-position: 10% center;
-    background-size: 440px 585px;
+    background-size: auto;
     padding: 0 70px 0 90px;
-    object-fit: cover;
+    min-height: 50vh;
   }
 
-  &__inner {
+  &__content {
+    padding-top: 50px;
+    margin-left: auto;
     max-width: 470px;
     width: 100%;
-    float: right;
   }
 
   &__subtitle {
@@ -24,21 +24,24 @@
     margin-bottom: 30px;
   }
 
+  &__list {
+    margin-bottom: 30px;
+  }
+
   &__item {
     color: $dark-blue;
     font-size: 24px;
     line-height: 1.5;
+    display: flex;
+    align-items: center;
   }
 
   &__item:not(:last-child) {
     margin-bottom: 20px;
   }
 
-  &__item:last-child {
-    margin-bottom: 30px;
-  }
-
   &__icon {
+    flex-shrink: 0;
     margin-right: 30px;
 
     &--timer {

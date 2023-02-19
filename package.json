@@ -18,7 +18,9 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-replace": "^1.1.4",
     "gulp-svg-sprite": "^2.0.1",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.3",
+    "jquery-form-styler": "^2.0.2",
     "mixitup": "^3.3.1",
     "sass": "^1.57.1",
     "slick-carousel": "^1.8.1"

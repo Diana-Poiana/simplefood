@@ -8,6 +8,7 @@
 
   &__tools {
     display: inline-flex;
+    order: 3;
   }
 
   &__saved {
@@ -111,44 +112,6 @@
 }
 
 .search {
-  position: absolute;
-  transform: translateX(1000px);
-  transition: transform 0.5s;
-  display: inline-flex;
-
-  &--active {
-    position: static;
-    transform: translateX(0);
-  }
-
-  &__label {
-    margin-right: 20px;
-  }
-
-  &__input {
-    border-radius: 5px;
-    border: 2px solid $grey;
-    max-width: 250px;
-    width: 100%;
-    padding: 5px 10px;
-    transition: color 0.4s, outline 0.3s, border-color 0.3s;
-
-    &::placeholder {
-      transition: color 0.7s;
-      color: $grey;
-    }
-
-    &:focus {
-      outline: 2px solid $accent;
-      border-color: transparent;
-    }
-
-    &:hover {
-      &::placeholder {
-        color: $text;
-      }
-    }
-  }
 
   &__btn,
   &__submit-btn {
@@ -190,7 +153,54 @@
   }
 
   &__icon {
-    fill: $white;
+    fill: transparent;
     stroke: $black;
+  }
+
+  &__form {
+    display: flex;
+    order: 2;
+    align-items: center;
+    position: absolute;
+    right: 500px;
+    transform: translateY(-500px);
+    transition: transform 0.5s;
+
+    &.active {
+      position: static;
+      transform: translateY(0);
+    }
+  }
+
+  &__label {
+    display: flex;
+    width: 300px;
+    font-size: 14px;
+    margin-right: 20px;
+  }
+
+  &__input {
+    border-radius: 5px;
+    border: 2px solid $grey;
+    max-width: 200px;
+    width: 100%;
+    padding: 5px 10px;
+    transition: color 0.4s, outline 0.3s, border-color 0.3s;
+
+    &::placeholder {
+      transition: color 0.7s;
+      color: $grey;
+    }
+
+    &:focus {
+      outline: 2px solid $accent;
+      border-color: transparent;
+    }
+
+    &:hover {
+      &::placeholder {
+        color: $text;
+      }
+    }
   }
 }

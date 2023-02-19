@@ -9,11 +9,9 @@
 
   &__filter-buttons {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 52px;
-  }
-
-  &__filter-item:not(:last-child) {
-    margin-right: 20px;
+    gap: 20px;
   }
 
   &__filter-btn {
@@ -57,7 +55,7 @@
 
   &__icon {
     margin-right: 10px;
-    transition: all 0.5s;
+    transition: fill 0.5s;
   }
 
   &__product {
@@ -91,8 +89,8 @@
 
 .product-card {
   max-width: 210px;
-  height: 300px;
   width: 100%;
+  height: 100%;
   background-color: $white;
   padding: 20px 15px;
   text-align: center;
@@ -109,7 +107,8 @@
   }
 
   &__photo {
-    margin: 0 auto;
+    object-fit: contain;
+    margin: 0 auto 5px;
   }
 
   &__text {

@@ -28,6 +28,7 @@
 
   &__btn {
     font-weight: 500;
+    font-size: 14px;
     display: flex;
     align-items: center;
     width: 200px;
@@ -58,7 +59,7 @@
 
   &__icon {
     fill: $white;
-    transition: all 0.5s;
+    transition: fill 0.5s;
     margin-right: 15px;
   }
 
@@ -66,14 +67,16 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     column-gap: 70px;
-    max-width: 571px;
-    width: 100%;
-    font-size: 18px;
-    line-height: 1;
     margin-right: 70px;
   }
 
+  &__item {
+    align-self: center;
+  }
+
   &__link {
+    font-size: 18px;
+    line-height: 1;
     border-radius: 5px;
     transition: outline 0.8s, color 0.8s, text-shadow 0.8s;
 
@@ -140,6 +143,10 @@
 
     &:hover {
       color: $accent;
+
+      .contacts__icon {
+        stroke: $accent;
+      }
     }
 
     &:active {
@@ -148,14 +155,16 @@
   }
 
   &__icon {
-    fill: $white;
+    fill: transparent;
     stroke: $black;
     margin-right: 5px;
+    transition: stroke 0.8s;
   }
 }
 
 .social {
   display: flex;
+  flex-wrap: wrap;
 
   &__item:not(:last-child) {
     margin-right: 10px;

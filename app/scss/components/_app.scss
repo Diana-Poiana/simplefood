@@ -1,24 +1,14 @@
 .app {
   &__inner {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: 570px 380px;
-    min-width: 570px;
-    height: 380px;
+    align-items: center;
   }
 
   &__subtitle {
-    max-width: 540px;
-    width: 100%;
     margin-bottom: 45px;
   }
 
   &__text {
-    max-width: 540px;
-    width: 100%;
     margin-bottom: 30px;
   }
 
@@ -28,6 +18,33 @@
 
   &__link {
     display: block;
-    margin-right: 30px;
+    height: 40px;
+    background-repeat: no-repeat;
+
+    &:focus {
+      outline: 2px solid $accent;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &--apple {
+      background-image: url('../images/home-page/appstore.svg');
+      width: 120px;
+    }
+
+    &--google {
+      background-image: url('../images/home-page/googleplay.svg');
+      width: 135px;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
   }
 }
