@@ -56,10 +56,10 @@ $(function () {
     dots: true,
     accessibility: true,
     appendArrows: '.slick-nav',
-    appendDots: '.slick-nav__dots',
+    appendDots: '.slick-dots',
     prevArrow: $('.slick-nav__prev'),
     nextArrow: $('.slick-nav__next'),
-  });
+  })
 
   //CATEGORIES FILTER BUTTONS
 

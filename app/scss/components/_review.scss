@@ -71,7 +71,7 @@
 .slick-dots {
   display: flex;
   justify-content: center;
-  position: relative;
+  // position: relative;
   line-height: 1;
 
   li {
@@ -83,6 +83,7 @@
       height: 15px;
       border-radius: 50%;
       background-color: $grey;
+      transition: outline 0.5s, background-color 0.5s;
 
       &:focus {
         outline: 2px solid $accent;
@@ -140,6 +141,7 @@
     z-index: 10;
     width: 34px;
     height: 34px;
+    transition: outline 0.7s, fill 0.7s, back-ground-color 0.7s, border 0.7s;
 
     &:focus {
       outline: 2px solid $accent;
