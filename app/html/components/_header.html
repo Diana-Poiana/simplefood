@@ -1,0 +1,74 @@
+<header class="header">
+  <div class="container">
+    <div class="header__content">
+
+      <a class="logo" href="#">
+        <img class="logo__img" src="images/logo.svg" alt="логотип сайта" width="200" height="39">
+      </a>
+
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link menu__link--active" href="#">
+              Главная
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              Блюда
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__tools">
+
+        <button class="search__btn" id="search" type="button">
+          <svg class="search__icon" width="19" height="19">
+            <use href="images/sprite.svg#search"></use>
+          </svg>
+          <span class="sr-only">
+            вызвать форму поиска
+          </span>
+        </button>
+
+        <button class="header__saved" type="button">
+          <svg class="header__saved-icon" width="19" height="18">
+            <use href="images/sprite.svg#cart"></use>
+          </svg>
+          <span class="sr-only">
+            перейти к сохраненным товарам
+          </span>
+          <span class="header__saved-number">
+            4
+          </span>
+        </button>
+
+      </div>
+
+      <form class="search__form" action="#" name="search-form">
+        <label class="search__label" for="search-input">
+          Искомый товар
+          <input class="search__input" type="text" name="search-input" placeholder="Поиск по сайту" required>
+        </label>
+
+        <button class="search__submit-btn" id="submit" type="submit" form="search__form">
+          <svg class="search__icon" width="19" height="19">
+            <use href="images/sprite.svg#pencil"></use>
+          </svg>
+          <span class="sr-only">
+            найти
+          </span>
+        </button>
+      </form>
+
+    </div>
+  </div>
+</header>

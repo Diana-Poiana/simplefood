@@ -1,0 +1,28 @@
+@include('components/_head.html', {
+"pageTitle": "Главная страница"
+})
+
+    @include('components/_header.html')
+
+<main class="main">
+  <h1 class="sr-only">
+    Сервис доставки еды Симплфуд | Главная страница
+  </h1>
+
+      @include('components/_hero.html')
+
+      @include('components/_categories.html')
+
+      @include('components/_delivery.html')
+
+      @include('components/_restaurant.html')
+
+      @include('components/_review.html')
+
+      @include('components/_app.html')
+
+</main>
+
+    @include('components/_footer.html')
+
+@include('components/_script.html')
