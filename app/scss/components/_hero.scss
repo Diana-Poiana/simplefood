@@ -20,6 +20,7 @@
     line-height: 1.3;
     margin-bottom: 20px;
     font-weight: 500;
+    z-index: 10;
   }
 
   &__delivery-promise {
@@ -31,9 +32,14 @@
     width: 100%;
     color: $text;
     margin-bottom: 20px;
+    z-index: 10;
   }
 
-  &__btn {
+  &__links {
+    z-index: 10;
+  }
+
+  &__button {
     display: inline-block;
     margin-right: 23px;
   }
@@ -57,5 +63,95 @@
       text-decoration-color: transparent;
       text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
     }
+  }
+}
+
+@media (max-width: $middle) {
+  .hero {
+    padding-bottom: 40px;
+
+    &__inner {
+      min-height: 600px;
+      height: 100%;
+      background-size: contain;
+      background-position: center right;
+      padding-bottom: 0;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: rgba(249, 250, 255, 0.7);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+    }
+
+    &__subtitle {
+      max-width: 257px;
+      font-size: 40px;
+    }
+
+    &__text {
+      max-width: 345px;
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: $small) {
+
+    .hero {
+      &__inner {
+        min-height: 300px;
+        height: 100%;
+      }
+
+      &__subtitle {
+        max-width: 257px;
+        font-size: 40px;
+      }
+
+      &__text {
+        max-width: 345px;
+        font-size: 16px;
+      }
+
+      &__button {
+        font-size: 14px;
+        padding: 8px 24px;
+      }
+
+      &__link {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: $large) and (orientation: landscape) {
+  .hero {
+
+    &__subtitle {
+      max-width: 257px;
+      font-size: 40px;
+    }
+
+    &__inner {
+      background-position: 80% 50%;
+      background-size: contain;
+      padding-bottom: 0
+    }
+
+    &__text {
+      max-width: 345px;
+      font-size: 16px;
+    }
+  }
+
+  .button {
+    padding: 7px 12px;
   }
 }

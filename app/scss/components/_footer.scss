@@ -167,7 +167,7 @@
 .social {
   display: flex;
   flex-wrap: wrap;
-  
+
 
   &__item:not(:last-child) {
     margin-right: 10px;
@@ -203,5 +203,60 @@
         fill: $accent;
       }
     }
+  }
+}
+
+@media (max-width: $xl) {
+  .footer {
+
+    &__content {
+      justify-content: center;
+    }
+    &__list {
+      flex-shrink: 0;
+    }
+  }
+}
+
+@media (max-width: $large) {
+  .footer {
+    &__content {
+      flex-wrap: wrap;
+      padding-bottom: 0;
+    }
+
+    &__subscribe {
+      margin-bottom: 30px;
+    }
+
+    &__list {
+      margin-bottom: 30px;
+    }
+  }
+
+  .contacts {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: $small) {
+  .footer {
+
+    &__content {
+      flex-direction: column;
+    }
+
+    &__subscribe {
+      order: 1;
+    }
+
+    &__list {
+      order: 3;
+      grid-template-columns: repeat(1, auto);
+    }
+  }
+
+  .contacts {
+    order: 2;
   }
 }

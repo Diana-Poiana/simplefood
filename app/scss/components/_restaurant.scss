@@ -105,3 +105,30 @@
     transition: transform 0.8s, fill 0.8s;
   }
 }
+
+@media (max-width: $xl) {
+  .restaurant {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .restaurant-card {
+    &__image {
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: $middle) {
+  .restaurant {
+    padding-bottom: 50px;
+
+    &__subtitle {
+      font-size: 24px;
+    }
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

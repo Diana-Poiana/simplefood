@@ -18,6 +18,7 @@
 
   &__photo {
     border-radius: 50%;
+    margin-right: 20px;
   }
 
   &__text {
@@ -46,8 +47,8 @@
 
     &::after {
       background-image: url('../images/home-page/quote-close.svg');
-      right: 0;
-      bottom: 30px;
+      right: -2px;
+      bottom: 0;
     }
   }
 
@@ -71,7 +72,7 @@
 .slick-dots {
   display: flex;
   justify-content: center;
-  // position: relative;
+  position: relative;
   line-height: 1;
 
   li {
@@ -159,6 +160,77 @@
       background-color: #FFF2ED;
       outline-color: transparent;
       border-color: transparent;
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .review {
+
+    &__subtitle {
+      font-size: 24px;
+    }
+
+    &__photo {
+      width: 250px;
+      height: 250px;
+    }
+
+    &__text {
+      font-size: 16px;
+      max-width: 450px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $middle) {
+
+  .review {
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__photo {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: $small) {
+  .review {
+    padding-bottom: 40px;
+
+    &__container {
+      position: relative;
+    }
+
+    &__photo {
+      width: 100px;
+      height: 100px;
+    }
+
+    &__text {
+      font-size: 14px;
+      max-width: 265px;
+      width: 100%;
+    }
+  }
+
+  .slick-nav {
+
+    &__prev {
+      position: absolute;
+      left: 15%;
+      top: 125px;
+    }
+
+    &__next {
+      position: absolute;
+      right: 15%;
+      top: 125px;
     }
   }
 }

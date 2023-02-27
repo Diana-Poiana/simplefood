@@ -50,6 +50,14 @@ $(function () {
     $('.search__form').toggleClass('active');
   });
 
+  $('.burger-menu').on('click', function () {
+    $('.mobile-menu').toggleClass('active');
+  });
+
+  $('.mobile-menu__btn').on('click', function () {
+    $('.mobile-menu').toggleClass('active');
+  });
+
   //SLICK SLIDER
 
   $('.review__inner').slick({
@@ -59,7 +67,30 @@ $(function () {
     appendDots: '.slick-dots',
     prevArrow: $('.slick-nav__prev'),
     nextArrow: $('.slick-nav__next'),
-  })
+
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          dots: false,
+        }
+      },
+    ]
+  });
+
+  $('.restaurant__list').slick({
+    dots: true,
+    accessibility: true,
+    arrows: false,
+    slidesToShow: 1,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: "unslick"
+      }
+    ]
+  });
 
   //CATEGORIES FILTER BUTTONS
 

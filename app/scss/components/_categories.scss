@@ -17,6 +17,7 @@
   &__filter-btn {
     display: flex;
     align-items: center;
+    white-space: nowrap;
     padding: 12px 32px;
     border: 1px solid $silver;
     border-radius: 5px;
@@ -88,8 +89,7 @@
 }
 
 .product-card {
-  max-width: 210px;
-  width: 100%;
+  width: 210px;
   height: 100%;
   background-color: $white;
   padding: 20px 15px;
@@ -127,5 +127,88 @@
     color: $dark-blue;
     display: block;
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: $xl) {
+  .categories {
+    padding-bottom: 40px;
+
+    &__filter-buttons {
+      flex-wrap: nowrap;
+      gap: 10px;
+      overflow-x: scroll;
+      padding-top: 10px;
+      padding-bottom: 30px;
+    }
+
+    &__icon {
+      flex-shrink: 0;
+      margin-right: 5px;
+    }
+
+    &__product {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media (max-width: $large) {
+  .categories {
+    padding-bottom: 65px;
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    &__product {
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      gap: 5px;
+    }
+  }
+}
+
+@media (max-width: $middle) {
+  .categories {
+
+    &__subtitle {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    &__filter-buttons {
+      margin-bottom: 0;
+    }
+
+    &__filter-btn {
+      font-size: 14px;
+      padding: 12px 15px;
+    }
+
+        &__photo {
+          
+          margin: 0;
+        }
+
+    .button {
+      font-size: 14px;
+    }
+  }
+
+  .product-card {
+    max-width: 165px;
+    padding: 20px 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: $small) {
+
+  .categories {
+    &__product {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }

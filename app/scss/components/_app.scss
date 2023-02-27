@@ -52,3 +52,23 @@
     object-fit: contain;
   }
 }
+
+@media (max-width: $large) {
+  .app {
+    &__img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $middle) {
+  .app {
+    &__subtitle {
+      font-size: 24px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+}

@@ -19,7 +19,7 @@
     align-items: center;
     border-radius: 5px;
     position: relative;
-    transition: ouline 0.8s, background-color 0.6s, color 0.5s;
+    transition: ouline 0.8s, background-color 0.8s, color 0.8s, fill 0.8s, stroke 0.8s;
 
     &:focus {
       outline: 2px solid $accent;
@@ -57,6 +57,7 @@
   &__saved-icon {
     fill: $white;
     stroke: $black;
+    transition: fill 0.8s, stroke 0.8s;
   }
 
   &__saved-number {
@@ -111,6 +112,138 @@
   }
 }
 
+.mobile-menu {
+  width: 300px;
+  position: absolute;
+  background-color: $white;
+  height: 100vh;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  padding: 25px 15px 0 15px;
+  transform: translateX(-200%);
+  transition: transform 0.9s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: calc(100vw - 300px);
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 300px;
+    right: 0;
+    z-index: -5;
+    transform: translateY(-200%);
+    transition: transform 0.9s;
+  }
+
+  &__logo {
+    padding-bottom: 25px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    transition: outline 0.8s, background-color 0.8s;
+
+    &:focus {
+      outline: 2px solid $accent;
+      background-color: #ff79501a;
+    }
+
+    &:hover {
+      background-color: $accent;
+
+      .mobile-menu__icon {
+        fill: $white;
+      }
+    }
+
+    &:active {
+      outline: transparent;
+      background-color: #ff79501a;
+    }
+  }
+
+  &__icon {
+    fill: $dark-blue;
+    transition: fill 0.8s;
+  }
+
+  &__list {
+    position: relative;
+    margin-bottom: 25px;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 300px;
+      height: 2px;
+      background-color: #EEEFF3;
+      left: -15px;
+    }
+
+    &::before {
+      top: -4px;
+    }
+
+    &::after {
+      bottom: -4px;
+    }
+  }
+
+  &__link {
+    display: block;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 6px 0 6px 0;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  &__link {
+
+    &--active {
+      color: $accent;
+    }
+
+    &:focus {
+      outline: 2px solid $accent;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    }
+  }
+}
+
+.mobile-menu.active {
+  display: block;
+  transform: translateY(0);
+
+  &::after {
+    transform: translateY(0);
+  }
+}
+
 .search {
 
   &__btn,
@@ -152,6 +285,7 @@
   }
 
   &__icon {
+    transition: fill 0.8s, stroke 0.8s;
     fill: transparent;
     stroke: $black;
   }
@@ -201,5 +335,84 @@
         color: $text;
       }
     }
+  }
+}
+
+.burger-menu {
+  width: 44px;
+  height: 44px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 3px;
+
+  &__line {
+    display: block;
+    width: 30px;
+    height: 1px;
+    background-color: $dark-blue;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 30px;
+      height: 1px;
+      background-color: $dark-blue;
+    }
+
+    &::before {
+      top: 13px;
+    }
+
+    &::after {
+      bottom: 12px;
+    }
+  }
+
+  &:focus {
+    outline: 2px solid $accent;
+    background-color: #ff79501a;
+  }
+
+  &:hover {
+    background-color: $accent;
+
+    .burger-menu__line,
+    .burger-menu__line::before,
+    .burger-menu__line::after {
+      background-color: $white;
+    }
+  }
+
+  &:active {
+    outline: transparent;
+    background-color: #ff79501a;
+  }
+}
+
+@media (max-width: $middle) {
+
+  .header {
+    padding: 16px 0;
+
+    &__logo {
+      width: 115px;
+      height: 23px;
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .header__saved {
+    margin-right: 10px;
   }
 }
