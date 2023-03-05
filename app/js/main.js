@@ -58,6 +58,14 @@ $(function () {
     $('.mobile-menu').toggleClass('active');
   });
 
+  $('.product-catalog__filter-button').on('click', function () {
+    $('.product-catalog__filter').toggleClass('open');
+  });
+
+  $('.filter-menu__btn').on('click', function () {
+    $('.product-catalog__filter').toggleClass('open');
+  });
+
   //SLICK SLIDER
 
   $('.review__inner').slick({
@@ -87,6 +95,20 @@ $(function () {
     responsive: [
       {
         breakpoint: 768,
+        settings: "unslick"
+      }
+    ]
+  });
+
+  $('.discounts__list').slick({
+    dots: true,
+    accessibility: true,
+    arrows: false,
+    slidesToShow: 1,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 831,
         settings: "unslick"
       }
     ]

@@ -115,7 +115,8 @@
 
   .restaurant-card {
     &__image {
-      margin: auto;
+      object-fit: cover;
+      width: 100%;
     }
   }
 }
@@ -127,6 +128,7 @@
     &__subtitle {
       font-size: 24px;
     }
+
     &__list {
       grid-template-columns: repeat(1, 1fr);
     }
