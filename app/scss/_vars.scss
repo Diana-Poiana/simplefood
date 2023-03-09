@@ -7,6 +7,11 @@ $bg: #F9FAFF;
 $black: #000000;
 $white: #FFFFFF;
 
+@mixin pseudo($pos: absolute, $content: '') {
+  content: $content;
+  position: $pos;
+}
+
 $xl: 1200px;
 $large: 992px;
 $middle: 768px;

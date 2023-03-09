@@ -141,8 +141,7 @@
     }
 
     &::before {
-      content: '';
-      position: absolute;
+      @include pseudo;
       display: inline-block;
       left: -2px;
       top: 2px;

@@ -11,8 +11,7 @@
     position: relative;
 
     &:not(:last-child)::after {
-      content: '';
-      position: absolute;
+      @include pseudo;
       width: 6px;
       height: 10px;
       background-image: url('../images/catalog-page/chevron.svg');

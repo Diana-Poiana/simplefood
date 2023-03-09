@@ -38,7 +38,7 @@ $(function () {
 
   //FORM STYLER
 
-  $('.product-catalog__select').styler();
+  $('.product-catalog__select, .product-description__select').styler();
 
   //MENU BUTTONS
 
@@ -64,6 +64,18 @@ $(function () {
 
   $('.filter-menu__btn').on('click', function () {
     $('.product-catalog__filter').toggleClass('open');
+  });
+
+  $(function () {
+
+    $("#rateYo").rateYo({
+      starWidth: "16px",
+      normalFill: "#C1C1C1",
+      ratedFill: "#FFB800",
+      spacing: "6px",
+      readOnly: true,
+    });
+
   });
 
   //SLICK SLIDER
@@ -99,6 +111,12 @@ $(function () {
       }
     ]
   });
+
+  $('.product-description__inner').slick({
+    prevArrow: '<button type="button" class="slick-left"><svg width="19" height="32"><use xlink: href="images/sprite.svg#arrow-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="slick-right"><svg width="19" height="32"><use xlink: href="images/sprite.svg#arrow-right"></use></svg></button>'
+  });
+
 
   $('.discounts__list').slick({
     dots: true,

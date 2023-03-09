@@ -181,9 +181,8 @@
 
     &::before,
     &::after {
-      content: '';
+      @include pseudo;
       display: block;
-      position: absolute;
       width: 300px;
       height: 2px;
       background-color: #EEEFF3;
@@ -356,8 +355,7 @@
 
     &::before,
     &::after {
-      content: '';
-      position: absolute;
+      @include pseudo;
       display: block;
       width: 30px;
       height: 1px;
