@@ -18,6 +18,32 @@ $(document).ready(function () {
 
     return false;
   });
+
+  $(document).on('click', '.checkbox__label', function (event) {
+    if ($(this).hasClass('active')) {
+      $(this).find('input').prop('checked', false);
+    } else {
+      $(this).find('input').prop('checked', true);
+    }
+    $(this).toggleClass('active');
+
+    return false;
+  });
+});
+
+
+
+
+//TABS
+
+$('.product-tabs__link').on('click', function(e){
+  e.preventDefault();
+  $('.product-tabs__link').removeClass('product-tabs__link--active');
+  $(this).addClass('product-tabs__link--active');
+
+  $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+  $($(this).attr('href')).addClass('product-tabs__content-item--active');
+  
 });
 
 
@@ -38,7 +64,7 @@ $(function () {
 
   //FORM STYLER
 
-  $('.product-catalog__select, .product-description__select').styler();
+  $('.product-catalog__select, .product-description__select, .checkbox__subscribe').styler();
 
   //MENU BUTTONS
 
@@ -66,6 +92,8 @@ $(function () {
     $('.product-catalog__filter').toggleClass('open');
   });
 
+  //RATEYO
+
   $(function () {
 
     $("#rateYo").rateYo({
@@ -74,6 +102,29 @@ $(function () {
       ratedFill: "#FFB800",
       spacing: "6px",
       readOnly: true,
+    });
+
+  });
+
+  $(function () {
+
+    $('.star').rateYo({
+      starWidth: "16px",
+      normalFill: "#C1C1C1",
+      ratedFill: "#FFB800",
+      spacing: "6px",
+      readOnly: true,
+    });
+
+  });
+
+  $(function () {
+
+    $('.rateyo').rateYo({
+      starWidth: "16px",
+      normalFill: "#C1C1C1",
+      ratedFill: "#FFB800",
+      spacing: "6px"
     });
 
   });
@@ -112,7 +163,7 @@ $(function () {
     ]
   });
 
-  $('.product-description__inner').slick({
+  $('.product-description__img-box').slick({
     prevArrow: '<button type="button" class="slick-left"><svg width="19" height="32"><use xlink: href="images/sprite.svg#arrow-left"></use></svg></button>',
     nextArrow: '<button type="button" class="slick-right"><svg width="19" height="32"><use xlink: href="images/sprite.svg#arrow-right"></use></svg></button>'
   });

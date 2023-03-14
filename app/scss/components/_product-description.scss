@@ -3,16 +3,32 @@
   &__top {
     padding: 60px 0 60px;
     display: flex;
+    // position: relative;
+
+    // &::after {
+    //   @include pseudo;
+    //   width: 100vw;
+    //   height: 1px;
+    //   background-color: #E4E4E4;
+    //   left: 0;
+    //   right: 0;
+    // }
   }
 
   &__img-box {
-    width: 610px;
+    max-width: 610px;
+    width: 100%;
     height: 550px;
     background-color: $white;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 30px;
+    text-align: center;
+  }
+
+  &__img {
+    width: 400px !important;
   }
 
   &__subtitle {
@@ -219,10 +235,228 @@
 .slick-right {
   position: absolute;
   z-index: 10;
-  left: 47%;
+  left: 90%;
   top: 50%;
 
   svg {
     fill: $grey;
+  }
+}
+
+.product-tabs {
+  max-width: 690px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__top {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    color: $dark-blue;
+    font-size: 24px;
+
+    &--active {
+      color: $accent;
+    }
+
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+
+  &__content-item {
+    display: none;
+
+    &.product-tabs__content-item--active {
+      display: block;
+    }
+
+    &__description {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__list-item {
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  &__subtitle {
+    color: $dark-blue;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: block;
+  }
+
+  &__review-windows {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    color: #505050;
+    margin-right: 30px;
+  }
+
+  &__text {
+    color: #505050;
+    margin-right: 10px;
+  }
+
+  &__textarea {
+    max-width: 400px;
+    width: 100%;
+    min-height: 165px;
+    resize: vertical;
+  }
+
+  &__personal-info {
+    max-width: 260px;
+    width: 100%;
+  }
+
+  &__textarea,
+  &__input {
+    border: 2px solid $grey;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 5px;
+
+    &::placeholder {
+      color: #c1c1c1;
+    }
+  }
+
+  &__input {
+    margin-bottom: 5px;
+  }
+
+  &__name-input,
+  &__email-input {
+    color: #505050;
+  }
+
+  &__email-input {}
+
+  &__button {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+.tabs-review {
+  position: relative;
+
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 60px;
+  }
+
+  &:not(:last-child) {
+    &:after {
+      @include pseudo;
+      width: 100%;
+      height: 1px;
+      background-color: #E5E5E5;
+      bottom: -20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  &__img {
+    margin-right: 25px;
+  }
+
+  &__details {
+    font-weight: 500;
+    line-height: 1.2;
+    margin-right: auto;
+  }
+
+  &__date {
+    display: block;
+    font-weight: 400;
+  }
+}
+
+.checkbox {
+  &__label {
+    color: #505050;
+    padding-left: 30px;
+    position: relative;
+    margin-left: 10px;
+
+    &::before {
+      @include pseudo;
+      display: inline-block;
+      left: -2px;
+      top: 2px;
+      width: 24px;
+      height: 24px;
+      background-color: $white;
+      border: 1px solid $silver;
+      border-radius: 5px;
+      transition: border 0.8s;
+    }
+
+    &.active {
+
+      &::before {
+        border-color: $dark-blue;
+        background-image: url('../images/catalog-page/checked.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 12px 8px;
+      }
+    }
+
+    &:focus {
+      &::before {
+        border-color: $accent;
+      }
+    }
+
+    &:hover {
+      color: $accent;
+
+      &::before {
+        border-color: $accent;
+      }
+    }
+  }
+
+  &__input {
+    display: none;
   }
 }
