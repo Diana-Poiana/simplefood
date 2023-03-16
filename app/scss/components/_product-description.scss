@@ -1,18 +1,19 @@
 .product-description {
+  &__inner {
+
+    &::after {
+      @include pseudo;
+      width: 100vw;
+      height: 1px;
+      background-color: #E4E4E4;
+      left: 0;
+      right: 0;
+    }
+  }
 
   &__top {
     padding: 60px 0 60px;
     display: flex;
-    // position: relative;
-
-    // &::after {
-    //   @include pseudo;
-    //   width: 100vw;
-    //   height: 1px;
-    //   background-color: #E4E4E4;
-    //   left: 0;
-    //   right: 0;
-    // }
   }
 
   &__img-box {
@@ -25,6 +26,10 @@
     align-items: center;
     margin-right: 30px;
     text-align: center;
+  }
+
+  &__link {
+    width: auto !important;
   }
 
   &__img {
@@ -247,10 +252,12 @@
   max-width: 690px;
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 120px;
 
   &__top {
     position: relative;
-    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   &__link {
@@ -358,8 +365,6 @@
     color: #505050;
   }
 
-  &__email-input {}
-
   &__button {
     display: block;
     margin-top: 20px;
@@ -415,7 +420,7 @@
     color: #505050;
     padding-left: 30px;
     position: relative;
-    margin-left: 10px;
+    display: flex;
 
     &::before {
       @include pseudo;

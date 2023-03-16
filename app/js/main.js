@@ -1,4 +1,6 @@
 
+
+
 $(document).ready(function () {
   //CHECKBOX
 
@@ -30,8 +32,6 @@ $(document).ready(function () {
     return false;
   });
 });
-
-
 
 
 //TABS
@@ -182,6 +182,17 @@ $(function () {
       }
     ]
   });
+
+  $('.related-products__list').slick({
+    dots: false,
+    accessibility: true,
+    slidesToShow: 5,
+    prevArrow: '<button type="button" class="related-products__prev"><svg width="10" height="18"><use xlink: href="images/sprite.svg#arrow-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="related-products__next"><svg width="10" height="18"><use xlink: href="images/sprite.svg#arrow-right"></use></svg></button>',
+  });
+
+  
+
 
   //CATEGORIES FILTER BUTTONS
 
