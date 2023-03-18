@@ -41,4 +41,83 @@
   .slick-slide {
     padding: 5px;
   }
+
+  ul.slick-dots {
+    position: absolute;
+    bottom: -30px;
+  }
+
+    /* hiding all bullets by default */
+    .slick-dots li {
+      display: none
+    }
+  
+    /* only displaying the active bullets and the 2 bullets next to it */
+    .slick-dots li.slick-active,
+    .slick-dots li.slick-active+li,
+    .slick-dots li.slick-active+li+li {
+      display: block;
+    }
+  
+    /* displaying the last three bullets when slick-active class isn't applied to any li before them  */
+    .slick-dots li:nth-last-child(1),
+    .slick-dots li:nth-last-child(2),
+    .slick-dots li:nth-last-child(3) {
+      display: block;
+    }
+  
+    /* hiding the last three bullets if slick-active exist before them */
+    .slick-dots li.slick-active~li:nth-last-child(1),
+    .slick-dots li.slick-active~li:nth-last-child(2),
+    .slick-dots li.slick-active~li:nth-last-child(3) {
+      display: none;
+    }
+  
+    /* specific conditions to always display the last three bullets */
+    .slick-dots li.slick-active+li+li:nth-last-child(3),
+    .slick-dots li.slick-active+li+li:nth-last-child(2),
+    .slick-dots li.slick-active+li+li:nth-last-child(1),
+    .slick-dots li.slick-active+li:nth-last-child(3),
+    .slick-dots li.slick-active+li:nth-last-child(2),
+    .slick-dots li.slick-active+li:nth-last-child(1) {
+      display: block;
+    }
 }
+
+@media (max-width: $xl) {
+  .related-products {
+    &__list {
+      justify-content: center
+    }
+
+    .product-card {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $middle) {
+  .related-products {
+
+    .product-card {
+      width: 100%;
+    }
+
+    &__prev,
+    &__next {
+      display: none !important;
+    }
+  }
+}
+
+@media (max-width: $small) {
+  .related-products {
+    &__subtitle {
+      font-size: 24px;
+    }
+  }
+}
+
+// .related-dots {
+
+// }

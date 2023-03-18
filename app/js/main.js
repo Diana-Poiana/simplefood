@@ -36,14 +36,14 @@ $(document).ready(function () {
 
 //TABS
 
-$('.product-tabs__link').on('click', function(e){
+$('.product-tabs__link').on('click', function (e) {
   e.preventDefault();
   $('.product-tabs__link').removeClass('product-tabs__link--active');
   $(this).addClass('product-tabs__link--active');
 
   $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
   $($(this).attr('href')).addClass('product-tabs__content-item--active');
-  
+
 });
 
 
@@ -165,7 +165,12 @@ $(function () {
 
   $('.product-description__img-box').slick({
     prevArrow: '<button type="button" class="slick-left"><svg width="19" height="32"><use xlink: href="images/sprite.svg#arrow-left"></use></svg></button>',
-    nextArrow: '<button type="button" class="slick-right"><svg width="19" height="32"><use xlink: href="images/sprite.svg#arrow-right"></use></svg></button>'
+    nextArrow: '<button type="button" class="slick-right"><svg width="19" height="32"><use xlink: href="images/sprite.svg#arrow-right"></use></svg></button>',
+    responsive: [
+      {
+        breakpoint: 768,
+      }
+    ]
   });
 
 
@@ -185,13 +190,43 @@ $(function () {
 
   $('.related-products__list').slick({
     dots: false,
+    arrows: true,
     accessibility: true,
     slidesToShow: 5,
     prevArrow: '<button type="button" class="related-products__prev"><svg width="10" height="18"><use xlink: href="images/sprite.svg#arrow-left"></use></svg></button>',
     nextArrow: '<button type="button" class="related-products__next"><svg width="10" height="18"><use xlink: href="images/sprite.svg#arrow-right"></use></svg></button>',
-  });
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
 
-  
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          dots: true,
+        }
+      },
+
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+        }
+      },
+    ]
+  });
 
 
   //CATEGORIES FILTER BUTTONS

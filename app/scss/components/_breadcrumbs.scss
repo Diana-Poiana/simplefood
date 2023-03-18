@@ -30,3 +30,16 @@
     margin-right: 17px;
   }
 }
+
+@media (max-width: $middle) {
+  .breadcrumbs {
+
+    &__item {
+
+      &:not(:first-child):not(:last-child) {
+        display: none;
+      }
+
+    }
+  }
+}
